@@ -1,8 +1,29 @@
-# React + Vite
+# Movie Details App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based movie details application that fetches movie information such as cast, budget, revenue, and production details from The Movie Database (TMDb) API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display detailed information about movies, including:
+  - Poster image
+  - Title, tagline, release year, and overview
+  - Cast members with their roles
+  - Production companies with their logos
+  - Movie ratings using ReactStars component
+  - Budget, revenue, and runtime details
+- Responsive UI with modern design using TailwindCSS
+- Fetches movie details and cast information using the TMDb API
+
+## Prerequisites
+
+Before running the project locally, ensure that you have the following installed:
+
+- [Node.js](https://nodejs.org/en/) (v14 or higher)
+- [npm](https://www.npmjs.com/get-npm) (or [Yarn](https://yarnpkg.com/) as an alternative)
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/movie-details-app.git
