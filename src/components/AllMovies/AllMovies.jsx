@@ -14,13 +14,14 @@ const AllMovies = () => {
 
 
     // bearer token 
-    const API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4Zjg0NzhmZDMwN2QzODAzMTI1ZTE3ZDQ3ZGU0OTE4YSIsIm5iZiI6MTY5NDAwMzQyMC4xNTM5OTk4LCJzdWIiOiI2NGY4NzBkY2ZmYzlkZTAxMWJlOTZiMjYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.dUuJomoF5ZhUIuslynhP28B_OvkJ7GQDRHx4oAsX3vw";
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+    const API_TOKEN = process.env.REACT_APP_API_TOKEN;
 
     // fetch genres
     useEffect(() => {
         const fetchGenres = async () => {
             const response = await axios.get(
-                'https://api.themoviedb.org/3/genre/movie/list',
+                `${API_BASE_URL}/genre/movie/list`,
                 {
                     headers: {
                         Authorization: `Bearer ${API_TOKEN}`,
@@ -35,7 +36,7 @@ const AllMovies = () => {
     useEffect(() => {
         const fetchMovies = async () => {
             const response = await axios.get(
-                'https://api.themoviedb.org/3/discover/movie',
+                `${API_BASE_URL}/discover/movie`,
                 {
                     headers: {
                         Authorization: `Bearer ${API_TOKEN}`,
@@ -57,7 +58,7 @@ const AllMovies = () => {
 
     const handleSearchMovies = async () => {
         try {
-            const response = await axios.get("https://api.themoviedb.org/3/search/movie", {
+            const response = await axios.get(`${API_BASE_URL}/search/movie`, {
                 headers: {
                     Authorization: `Bearer ${API_TOKEN}`,
                 },
